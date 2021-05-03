@@ -1,0 +1,33 @@
+web page design: HTML (Hypertext Markup Language) Noun
+styles for the web page: CSS (Cascading Style Sheet) Adjective
+behavior (events): JavaScript to write code that will be excuted when any event takes place (button's click event) - scripting language Verb
+
+C, C++, C#, Java
+
+HTML: (Hypertext Markup Language)
+	- standard markup language for creating web pages
+	- describes the structure of the web page
+	- it does this by using tags (elements)
+	- HTML tags tells browser how to display the content
+
+HTML document:
+	- head: contains some information about HTML document
+	- body: contains the actual design/structure of the document
+
+Tags/Elements:
+	a tag/element can contain another tag/element or a text as child
+	a tag/element can be empty: empty tag
+
+Lists:
+	a. unordered list (ul)
+	b. ordered list (ol)
+		attribute: type
+		possible values: 1 (default), A, a, i, I
+		attribute: start
+		possible values: anything (only numeric)
+	** both OL and UL lists contain list items (li)
+
+	c. description list: (dl)
+		item (term): dt
+		desciption: dd
+
