@@ -1,0 +1,16 @@
+button, h2 {
+		background-color:white;			
+		font-family:'Segoe UI'
+}
+			
+			h2 {
+				background-color:blue;	
+			 }
+
+			#button2 {
+				background-color:burlywood;
+			 }		
+			
+			.myStyle{
+				color:white
+			}

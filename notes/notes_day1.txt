@@ -31,3 +31,27 @@ Lists:
 		item (term): dt
 		desciption: dd
 
+Meta tag:
+	author, refresh, keywords, charset, viewport etc.
+style:
+
+	style-atribute-name:value
+	example:
+		background-color:blue
+		font-size:'100px'
+		border-radius:5px
+
+1. inline (same HTML file on the element itself)
+2. outline (same HTML file outside the element and link with the element in 3 different ways)
+	use selectors to link the style with an element:
+	a. element selector
+	b. id selector
+	c. class selector
+3. outfile (outside HTML file - separate *.css file and link it with HTML by link tag)	
+
+script, link tag
+
+table, thead, tbody, th, td etc. [border, colspan, rowspan,..]
+
+select list (dropdownlist box) - select, option [selected]
+
