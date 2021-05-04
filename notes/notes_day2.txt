@@ -1,0 +1,6 @@
+section
+article
+header
+aside
+
+inline style (element)>outline style (style)>outfile (css)>browser style
