@@ -1,0 +1,12 @@
+#mainHeader {
+    background-color: burlywood;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#productDiv {
+    border: 1px solid azure;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
