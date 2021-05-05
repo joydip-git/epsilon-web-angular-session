@@ -1,0 +1,17 @@
+dynamic programming language
+
+data types
+operators
+expressions/control flow statements
+
+data types:
+	- number
+	- boolean
+	- string
+	- array
+	- object
+
+	- function
+	- undefined
+	
+

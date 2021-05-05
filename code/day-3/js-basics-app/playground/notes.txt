@@ -1,0 +1,34 @@
+//value --> variable/identifier
+//var --> keyword
+//loose typing => loosely typed language
+var x = 10
+var y = 'joydip'
+var z = 12.34
+var m = true
+var arr = [1, 2, 3, 4]
+var person = {
+    name: 'joydip',
+    id: 1,
+    salary: 1000,
+    print: function () {
+        return this.name + ' ' + this / id + ' ' + this / this.salary;
+    }
+}
+var val;
+var v = null;
+console.log(typeof x)
+console.log(typeof y)
+console.log(typeof z)
+console.log(typeof m)
+console.log(typeof arr)
+console.log(typeof person)
+console.log(typeof person.print)
+console.log(typeof person.name)
+console.log(typeof val)
+console.log(typeof v)
+
+//x = 'epsilon'
+console.log(x.toLowerCase());
+// if (x % 2 == 0) {
+//     console.log('x is even')
+// }
