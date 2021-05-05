@@ -13,5 +13,34 @@ data types:
 
 	- function
 	- undefined
+
+operators:
+	arithmatic: +, -, *, /, %, ++, --
+	conditional: >, <, >=, <=, &&, ||, !, ?:
+	bitwise: &, |, ^, <<, >>
+	equality: ==, !=
+
+control flow statements:
+	conditional statements:
+	 - if...else, if, nested if...else, switch..case
+	Looping:
+		while, do..while
+	iterational:
+		for, for..in, for..each
+	jump statements:
+		break, continue etc.
+
+	
+
+
+
+
+
+
+
+
+
+
+
 	
 

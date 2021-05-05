@@ -1,0 +1,56 @@
+var first = 10;
+var second = 20;
+var third = 30;
+console.log(first--);
+console.log(--first);
+
+//var result = first > second ? first : second;
+var result;
+if (first > second) {
+    result = first;
+} else
+    result = second;
+
+if (first > second) {
+    if (first > third)
+        console.log(first)
+    else
+        console.log(third)
+}
+else
+    console.log(second)
+
+var choice = 'name';
+if (choice == 'name') {
+
+} else if (choice == 'price') {
+
+} else if (choice == 'rating') {
+
+} else {
+
+}
+
+switch (choice) {
+    case 'name':
+        break;
+
+    case 'price':
+        break;
+
+    case 'rating':
+        break;
+
+    default:
+        break;
+}
+
+while (first > 5) {
+    console.log('hello')
+    first--;
+}
+
+do {
+    console.log('hello')
+    first--;
+} while (first > 5);
