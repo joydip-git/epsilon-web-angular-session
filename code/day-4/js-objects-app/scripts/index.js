@@ -65,7 +65,17 @@ function printInfo(fnRef) {
 for (var i = 0; i < people.length; i++) {
     var p = people[i];
     var fn = p.print;
+    /** fn-->window
+     * window<--function () {
+        return 'Salary: ' + this.salary;
+    }
+     */
     var boundFn = fn.bind(p);
+    /**
+     * p<--function () {
+        return 'Salary: ' + this.salary;
+    }
+     */
     printInfo(boundFn);
 }
 
