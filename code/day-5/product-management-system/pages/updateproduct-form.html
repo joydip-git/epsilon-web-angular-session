@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+
+    <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-4.6/css/bootstrap.min.css">
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-4.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../styles/app-style.css">
+</head>
+
+<body>
+    <div id="mainHeader">
+        <h2>Product Management System</h2>
+    </div>
+    <br>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="./home.html">
+                <button class="btn btn-primary">
+                    Home
+                </button>
+            </a>
+            <a href="./product-list.html">
+                <button class="btn btn-primary">
+                    Products
+                </button>
+            </a>
+            <a href="./newproduct-form.html">
+                <button class="btn btn-primary">
+                    Add Product
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="" class="form-horizontal">
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Id:
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" name="productId" id="productId" placeholder="product id" class="form-control"
+                        readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Name:
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" name="productName" id="productName" placeholder="product name"
+                        class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Code:
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" name="productCode" id="productCode" placeholder="product code" readonly
+                        class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Release Date:
+                </label>
+                <div class="col-sm-10">
+                    <input type="date" name="releaseDate" id="releaseDate" placeholder="product relase date" disabled
+                        class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Description:
+                </label>
+                <div class="col-sm-10">
+                    <textarea placeholder="product description" name="description" id="description"
+                        class="form-control">
+                    </textarea>
+                    <!-- <input type="" name="description" id="description" placeholder="product description"
+                        class="form-control"> -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Price:
+                </label>
+                <div class="col-sm-10">
+                    <input type="number" name="price" id="price" placeholder="product price" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Rating:
+                </label>
+                <div class="col-sm-10">
+                    <input type="number" name="starRating" id="starRating" placeholder="product rating"
+                        class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">
+                    Image URL:
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" name="imageUrl" id="imageUrl" placeholder="product image path"
+                        class="form-control">
+                </div>
+            </div>
+
+            <div class="container-fluid" style="text-align:center">
+                <input type="submit" class="btn btn-primary" value="Update">
+                &nbsp;&nbsp;
+                <input type="submit" class="btn btn-danger" value="Cancel">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+GET http://127.0.0.1:8081/productservice
+
+###
+GET http://127.0.0.1:8081/productservice/1
+
+###
+POST http://127.0.0.1:8081/productservice
+
+Content-Type: application/json
+
+{
+    "productId":100,
+    "productName":
+    "dell laptop",
+    "productCode":"GDN-21341",
+    "releaseDate":"May 7, 2021",
+    "description":"laptop",
+    "price":67000,
+    "starRating":4.5,
+    "imageUrl":"http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+}
+
+###
+DELETE  http://127.0.0.1:8081/productservice/100
