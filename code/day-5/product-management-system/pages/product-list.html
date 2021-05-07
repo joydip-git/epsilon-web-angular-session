@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/app-style.css">
 </head>
 
-<body>
+<body onload="getProducts()">
     <div id="mainHeader">
         <h2>Product Management System</h2>
     </div>
@@ -62,10 +62,10 @@
         </div>
         <div>
             <div class="panel panel-heading">
-                <h4>5 Product(s) found..</h4>
+                <h4 id='countHeader'> Product Count:</h4>
             </div>
             <div class="table-responsive">
-                <table class="table">
+                <table class="table" id='productTbl'>
                     <thead style="background-color: burlywood;">
                         <tr>
                             <td>Image</td>
@@ -76,7 +76,7 @@
                             <td>Delete</td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id='productTblBody'>
                         <!-- <tr>
                             <td>
                                 <div class="img-responsive">
@@ -120,6 +120,7 @@
                         </tr> -->
                     </tbody>
                 </table>
+                <script src="../scripts/product-data.js"></script>
             </div>
         </div>
     </div>

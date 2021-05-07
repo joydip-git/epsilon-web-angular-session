@@ -42,7 +42,8 @@
     </nav>
 
     <div class="container">
-        <form action="" class="form-horizontal" name="productForm" method="POST" autocomplete="on">
+        <form class="form-horizontal" name="productForm" method="POST" autocomplete="on" id="productForm"
+            onsubmit="addData(event)">
             <div class="form-group">
                 <label for="productId" class="col-sm-2 control-label">
                     Id:
@@ -132,7 +133,7 @@
 
         </form>
     </div>
-
+    <script src="../scripts/add-data.js"></script>
 </body>
 
 </html>
