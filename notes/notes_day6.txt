@@ -32,3 +32,75 @@ JS:
 dynamic programming language
 JS does not have compile time checking as it does not have any compiler who does static compilation
 JS file gets compiled during runtime: Just-in-Time compilation and then it is executed
+
+//1. memory block for personName is allocated during compilation time with value undefined
+//2. during execution time the actual value is assigned
+// var personName = 'Joydip'
+// personName = 10
+//3. the following line will throw an error (TypeError) since the type of value stored in personName is NOT a string BUT a number, which does not support toLowerCase() function
+//this error is identified during runtime during execution NOT during compilation of JS code
+// var res = personName.toLowerCase()
+// console.log(res)
+
+#include<stdio.h>
+
+#include<iostream.h>
+#include<calculation.h>
+
+using 
+imports
+
+JS Module:
+Node.js --> module
+A JS file is a module
+a module's members can be imported in other modules
+
+A. To define a module and export members of a module:
+	module object in a JS file in node js
+	module object has exports property: it is used to export of member(s) of JS module so that other module(s) can import them
+	this is done by creating a JS object with all exportable members of a module (JS file) and pass that object to the exports property of the module object in that JS file
+
+B. To import a Node JS module fron another file (module)
+	use require function: (don't use extension)
+		a. to import your own module: mention the path (along with name) of the file 
+		b. to import node js module:
+		c. to import third-party modules:
+
+	require function provides you the JS object of that is assigned to the exports property of that imported module
+
+different formats of module:
+Common JS format, ES6 module format
+
+Formats: 
+Common JS format of module: module (exports) and require(<path>)
+ES6 format of module: exports and import,
+AMD (asynchonous module definition):
+	require([],{
+		
+	})
+UMD
+....
+
+module loader:
+Common JS module loader (It is part of Node runtime, understands the definition of module object and require function)
+
+Require JS: require, module
+
+Browser does not have any module loader s/w by default like Node.js, which has CommonJS module loader. 
+
+Hence, browser does not understand JS file written in module format
+You have to supply a module loader s/w to browser which will be loaded in the browser runtime fist and then when other actual JS files are loaded, that module loader will help to interpret the the modules and linking between the modules and accordingly will load those other linked JS files and supply all of them to JS engine
+
+Now for this in browser env you can use Require.js as module loader
+Unfortunately Require.js do not understand Common JS module format. So, if the JS files are written in Common JS module format you application will not run in the browser env
+you have to -
+	either choose any other module format (AMD)
+	or convert Common JS module format to other module format (preferrably AMD)
+	use r.js with Require.js (r.js is a Node adapter for Require.js which understands that Common.js module format)
+
+Require js does load modules asynchronously 
+and it expects that you write your module in asynchonous module definition format (AMD)
+
+
+
+
