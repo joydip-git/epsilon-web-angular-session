@@ -101,6 +101,21 @@ you have to -
 Require js does load modules asynchronously 
 and it expects that you write your module in asynchonous module definition format (AMD)
 
+Advanced JS:
+//1. prototype-based programming
+//2. closure
+//3. this keyword and lexical this problem
+//4. compilation and execution: execution context object, variable object, scope, variable and function hoisting
+
+Execution context:
+       a. Global execution context (1)-created by default by js engine
+       B. Function execution context 
+
+Compilation stage or creation stage:
+Variables are registered in vaiableObject and memory block for those are allocated
+Hoisting
+
+Execution stage:
 
 
 
