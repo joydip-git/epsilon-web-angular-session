@@ -1,0 +1,17 @@
+1. create a browser-based application:
+	a. create an HTML file
+	b. Write JS code in mutiple files using module concept
+	c. Link the main JS file with other JS files
+	d. finally link the main JS file with HTML file
+	e. link module-loader (require js) with HTML file for interpretation of JS modules and resolve dependencies and load all JS files in browser runtime
+	f. convert (transform) othe module format into AMD for require js
+	g. install some transpiler s/w (packages) in our application
+
+ECMAScript:
+	ES6 (2015)
+	
+
+JavaScript:
+	ES5 <2015
+	ES6 features:
+	const, let, spread operator
