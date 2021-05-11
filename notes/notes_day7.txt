@@ -68,4 +68,74 @@ Module formats:
 2. convert your code in AMD format
 3. in case of Common JS format, use r.js (Node adpater for RequireJS)
 
-Babel --> transpiler
+transpiler
+1. Convert/Transform new style (ES6,7,8,9....) JS code into old style (<ES5) JS code
+2. Convert/Transform new style module format (ES6 - import/export) into browser understandable (module-loader understandable) format 
+  in our case: ES6 module format --> AMD module format
+
+Bower
+Node Package Manager (NPM): bootstrap
+
+package.json:
+	a. which third party packages are used in the application
+	b. information: name, main, author, license, keywords, script
+>npm init
+>npm init --yes
+var obj = {
+	name: 'joydip',
+	show:function(){}
+}
+
+var jsonObj = {
+	"name":"joydip",
+	"id":1,
+        "isTrainer":true,
+	"address":{
+		"city":"Bangalore"
+	},
+        "subjects":["HTML","CSS"]		
+}
+
+Babel:
+1. core package: @babel/core
+2. CLI package: @babel/cli
+
+>npm i @babel/core @babel/cli --save-dev
+transpilation command:
+>.\node_modules\.bin\babel <source code folder> --out-dir <output code folder>
+
+preset: collection of certain number of useful plugins
+@babel/preset-env: to transform ES2015 (ES6)+ syntax 
+
+>npm i @babel/preset-env --save-dev
+
+plugin: module transformer plugin=> @babel/plugin-transform-modules-amd
+>npm i @babel/plugin-transform-modules-amd --save-dev
+
+Babel configuration:
+	.babelrc
+	babel.config.js
+
+1. there is no web server hosting my app
+2. transformed main file(index.js) from build folder is manually being linked to the HTML file
+3. this is dev time, what about production time (create consolidated deployable package)
+4. i am manually supplying a module loader to the browser
+
+bundler s/w:
+-------------------------
+Webpack, Browserify etc.
+
+>npm i webpack webpack-cli --save-dev
+
+webpack loaders:
+---------------------------------------
+babel-loader: takes transpiled JS files and bundle them togethger
+html-loader: takes the html file and produces production level template
+css-loader, style-loader: gather all css files, bundle them and apply the CSS styles on the template
+
+>npm i babel-loader html-loader css-loader style-loader --save-dev
+
+
+
+
+
