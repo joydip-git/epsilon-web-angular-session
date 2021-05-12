@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+
+    <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-4.6/css/bootstrap.min.css">
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-4.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../styles/app-style.css">
+</head>
+
+<body onload="getProducts()">
+    <div id="mainHeader">
+        <h2>Product Management System</h2>
+    </div>
+    <br>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="./home.html">
+                <button class="btn btn-primary">
+                    Home
+                </button>
+            </a>
+            <a href="./product-list.html">
+                <button class="btn btn-primary">
+                    Products
+                </button>
+            </a>
+            <a href="./newproduct-form.html">
+                <button class="btn btn-primary">
+                    Add Product
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <div class="panel panel-primary" id="productDiv">
+        <div class="row" style="margin: 10px;">
+            <div class="col-md-6">
+                Filter By:
+                &nbsp;&nbsp;
+                <input type="text" placeholder="enter search text">
+            </div>
+            <div class="col-md-6">
+                Sort By:
+                &nbsp;&nbsp;
+                <select class="dropdown">
+                    <option disabled selected>--select--</option>
+                    <option>Name</option>
+                    <option>Price</option>
+                    <option>Rating</option>
+                    <option>Code</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="panel panel-heading">
+                <h4 id='countHeader'> Product Count:</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table" id='productTbl'>
+                    <thead style="background-color: burlywood;">
+                        <tr>
+                            <td>Image</td>
+                            <td>Name</td>
+                            <td>Code</td>
+                            <td>Price</td>
+                            <td>Rating</td>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id='productTblBody'>
+                        <!-- <tr>
+                            <td>
+                                <div class="img-responsive">
+                                    <a href="./product-details.html">
+                                        <img src="#" alt="NA">
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="./updateproduct-form.html">
+                                    Leaf Rake
+                                </a>
+                            </td>
+                            <td>GDN-0011</td>
+                            <td>1234</td>
+                            <td>4</td>
+                            <td>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="img-responsive">
+                                    <a href="./product-details.html">
+                                        <img src="#" alt="NA">
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="./updateproduct-form.html">
+                                    Garden Cart
+                                </a>
+                            </td>
+                            </td>
+                            <td>GDN-0023</td>
+                            <td>123</td>
+                            <td>5</td>
+                            <td>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <script src="../scripts/product-data.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

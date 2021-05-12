@@ -1,0 +1,15 @@
+#tdAdd {
+    text-align: center;
+}
+
+/*
+table>tbody>tr>#tdAdd
+*/
+
+.myStyle {
+    background-color: antiquewhite;
+}
+
+.someStyle {
+    color: wheat;
+}

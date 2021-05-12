@@ -1,0 +1,87 @@
+section
+article
+header
+aside
+
+inline style (element)>outline style (style)>outfile (css)>browser style
+
+<style>
+   
+   h1 {     
+     color: white;
+     font-weight:bold;
+   }
+
+   #mainHeader {
+     
+     color: white;
+     font-weight:bold;
+   }
+
+   .headerStyle{
+	color: white;
+     	font-weight:bold;
+   }
+   * {
+	color: white;
+     	font-weight:bold;
+   }
+   h1, h2, div, p, table {
+     
+     color: white;
+     font-weight:bold;
+   }
+
+   h1.headerStyle {
+	background-color:blue
+   }
+
+   a:link{
+	color:blue
+   }
+   a:hover{
+	color:yellow
+   }
+   a:active{
+	color:gray
+   }
+   a:visited{
+	color:red
+   }
+   
+</style>
+
+<h1 id="mainHeader" class="headerStyle" style="color: white;font-weight:bold"></h1>
+
+<h1 id="mainHeader" class="myStyle" style="color: white;font-weight:bold"></h1>
+
+<a href="https://www.google.com">Visit Google</a>
+
+a. simple - element, id, class, universal (*)
+b. combinator #tblId>tbody>tr>td>img
+c. pseudo-class
+d. pseudo-element
+e. attribute
+
+after, before, selection, first-line, first-letter
+
+css properties:
+background-x:
+	-color
+	-image
+	-repeat
+	-position
+border-x:
+	-radius: 2px
+	-width: 3px
+	-color: blue
+	-style: solid
+border: 2px solid blue;
+
+color:
+width:
+margin:
+float:
+display:
+font-family:
+font-size:

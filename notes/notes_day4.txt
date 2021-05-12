@@ -1,0 +1,4 @@
+1. creation stage:
+	 - compilation (scanning)
+2. execution stage:
+	 - execution

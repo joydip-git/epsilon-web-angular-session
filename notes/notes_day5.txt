@@ -1,0 +1,12 @@
+HTML file
+	- HTML DOM (Document Object Model)
+		- tree/hierarchical structure of the HTML elements (through objects)
+
+JS:	
+	DOM APIs: gives you flexibility to access the HTML DOM and manipulate the existing elements and also dynamically generate elements and push in the dom which will be reflected in the HTML design
+
+	document.getElementById('');
+		.getElementsByName('')
+
+	document.createElement('tr')
+	

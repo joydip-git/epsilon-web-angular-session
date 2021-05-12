@@ -1,0 +1,141 @@
+1. create a browser-based application:
+	a. create an HTML file
+	b. Write JS source code in mutiple files using module concept and  link the main JS file with other JS files (index.js with calculation.js)[(ES6 module format)]
+	c. install some transpiler s/w (packages) in our application
+	d. convert (transform) othe module format into AMD for require js
+	e. finally link the main JS (transformed) file with HTML file (index.js)
+	f. link module-loader (require js) with HTML file for interpretation of JS modules and resolve dependencies and load all JS files in browser runtime
+
+ECMAScript:
+	ES6 (2015)
+	
+
+JavaScript:
+	ES5 <2015
+	ES6 features:
+	const, let, spread operator
+
+
+run JS code:
+A. Browser environment:
+1. write JS code in a file (.js file)
+   link the file with HTML file 
+   run the HTML (load) in the browser 
+Result: means supply the HTML and the linked JS file to browser runtime and the browser runtime interprets the HTML file, thus displaying the design in browser and supply the JS file to JS engine, which will compile and execute the code in JS file
+
+B. Node JS environment
+   write JS code in a file (.js file)
+   supply the file to Node runtime
+Result: Node js runtime (which is built at the top of a JS engine - V8), will compile and execute the code in the JS file
+
+
+Module:
+-------
+every JS file is a module
+in Node JS there is JS object, known as "module", which is used to represent a JS module (a file)
+
+require is a method of Node JS, NOT of browser
+that's why you have to supply additionally a piece of s/w, known as module-loader, to understand and resolve dependencies amongst the JS files to the browser
+
+Module loaders:
+---------------------------
+RequireJS: expects the code to ne written in AMD format
+SystemJS
+
+Module formats:
+-------------------------------------
+1. Common JS format: (default format to define JS modules in Node Js)
+	module.exports ={propName: member-name}
+	var mod = require('module-path')
+
+2. ES6 new module format:
+	export member
+	import {} from ''
+
+3. AMD (asynchronous module definition format)
+   define(['./calculation'], function(require,..){})
+
+4. UMD (Universal module definition format)
+
+5. IIFE (Immediately Invocable Function Expression)
+
+   (function(){
+	var addFn = function(a,b){}
+	var subFn = function(a,b){}
+   })();
+
+1. write code in AMD format itself
+2. convert your code in AMD format
+3. in case of Common JS format, use r.js (Node adpater for RequireJS)
+
+transpiler
+1. Convert/Transform new style (ES6,7,8,9....) JS code into old style (<ES5) JS code
+2. Convert/Transform new style module format (ES6 - import/export) into browser understandable (module-loader understandable) format 
+  in our case: ES6 module format --> AMD module format
+
+Bower
+Node Package Manager (NPM): bootstrap
+
+package.json:
+	a. which third party packages are used in the application
+	b. information: name, main, author, license, keywords, script
+>npm init
+>npm init --yes
+var obj = {
+	name: 'joydip',
+	show:function(){}
+}
+
+var jsonObj = {
+	"name":"joydip",
+	"id":1,
+        "isTrainer":true,
+	"address":{
+		"city":"Bangalore"
+	},
+        "subjects":["HTML","CSS"]		
+}
+
+Babel:
+1. core package: @babel/core
+2. CLI package: @babel/cli
+
+>npm i @babel/core @babel/cli --save-dev
+transpilation command:
+>.\node_modules\.bin\babel <source code folder> --out-dir <output code folder>
+
+preset: collection of certain number of useful plugins
+@babel/preset-env: to transform ES2015 (ES6)+ syntax 
+
+>npm i @babel/preset-env --save-dev
+
+plugin: module transformer plugin=> @babel/plugin-transform-modules-amd
+>npm i @babel/plugin-transform-modules-amd --save-dev
+
+Babel configuration:
+	.babelrc
+	babel.config.js
+
+1. there is no web server hosting my app
+2. transformed main file(index.js) from build folder is manually being linked to the HTML file
+3. this is dev time, what about production time (create consolidated deployable package)
+4. i am manually supplying a module loader to the browser
+
+bundler s/w:
+-------------------------
+Webpack, Browserify etc.
+
+>npm i webpack webpack-cli --save-dev
+
+webpack loaders:
+---------------------------------------
+babel-loader: takes transpiled JS files and bundle them togethger
+html-loader: takes the html file and produces production level template
+css-loader, style-loader: gather all css files, bundle them and apply the CSS styles on the template
+
+>npm i babel-loader html-loader css-loader style-loader --save-dev
+
+
+
+
+
