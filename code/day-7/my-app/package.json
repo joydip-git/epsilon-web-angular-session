@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "simple module based js app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transpile": "babel source --out-dir build",
+    "dev-compile": "webpack --mode development",
+    "prod-compile": "webpack --mode production",
+    "dev-load": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,7 @@
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

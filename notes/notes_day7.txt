@@ -120,20 +120,51 @@ Babel configuration:
 2. transformed main file(index.js) from build folder is manually being linked to the HTML file
 3. this is dev time, what about production time (create consolidated deployable package)
 4. i am manually supplying a module loader to the browser
+5. i want the transpilation of JS codes to happen automatically every time I change my source code (and save it)
 
 bundler s/w:
 -------------------------
 Webpack, Browserify etc.
-
->npm i webpack webpack-cli --save-dev
 
 webpack loaders:
 ---------------------------------------
 babel-loader: takes transpiled JS files and bundle them togethger
 html-loader: takes the html file and produces production level template
 css-loader, style-loader: gather all css files, bundle them and apply the CSS styles on the template
+images: file-loader
+xml files: xml-loader
 
+plugins for webpack: html-webpack-plugin
+
+>npm i webpack webpack-cli --save-dev
 >npm i babel-loader html-loader css-loader style-loader --save-dev
+>npm i html-webpack-plugin --save-dev
+
+webpack configuration:
+-----------------------------------------------
+1. entry: start up JS file from where bundling will start (string type path)
+2. output: { filename:'bundle.js', path:'build'}
+3. plugins: [new HtmlWebpackPlugin({template:'./index.html'})]
+4. module: { rules:[{},{},{}] }
+	rule:{ test:'.js', use:'babel-loader'}
+	rule:{ test:'.html', use:'html-loader'}
+	rule:{ test:'.css', use:['','']}
+
+
+
+1. development time
+	- package: deployable code (js files, html, css, images, other file)
+	- package should be created after every modification in the code and i want that package to be loaded in the browser, being hosted by a web server
+2. production time
+
+global path:
+base-dir:\Users\<user-name>\AppData\Roaming\npm
+
+application development server:
+-------------------------------------------
+lite-server, webpack-dev-server etc.
+
+>npm i webpack-dev-server --save-dev
 
 
 

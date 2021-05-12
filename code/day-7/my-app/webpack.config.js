@@ -1,38 +1,30 @@
-var path = require('path')
-var HTMLWebpackPlugin = require('html-webpack-plugin')
-var { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-var webpackConfig = {
-    entry: path.resolve(__dirname, 'source', 'index.js'),
+const pathModule = require('path')
+const webpackConfigObject = {
+    entry: pathModule.resolve(__dirname, 'source', 'index.js'),
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build')
+        path: pathModule.resolve(__dirname, 'build')
     },
     module: {
         rules: [{
             test: /\.js$/,
             use: 'babel-loader'
         }, {
-            test: /\.(htm|html)$/,
+            test: /\.html$/,
             use: 'html-loader'
         }, {
             test: /\.css$/,
             use: ['css-loader', 'style-loader']
         }]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'index.html')
-        }),
-        new CleanWebpackPlugin({
-            cleanStaleWebpackAssets: true
-        })
-    ],
-    devtool: 'inline-source-map',
+    plugins: [new HtmlWebpackPlugin({
+        template: pathModule.resolve(__dirname, 'index.html')
+    })],
     devServer: {
-        contentBase: path.resolve(__dirname, 'build'),
-        port: 4000
+        contentBase: pathModule.resolve(__dirname, 'build'),
+        port: 4000,
+        compress: true
     }
 }
-module.exports = webpackConfig;
+module.exports = webpackConfigObject
