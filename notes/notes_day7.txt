@@ -167,6 +167,29 @@ lite-server, webpack-dev-server etc.
 >npm i webpack-dev-server --save-dev
 
 
+browser-based application 
+
+A. development:
+	create a app folder
+	create package.json file
+	create an HTML file
+	create JS source codes and place them in another sub-folder
+	install transpiler and its' plugins and presets
+	configure the transpiler to use the presets and plugins
+	install bundler s/w and loaders and plugins
+	configure the budler to use loaders and plugins and others
+	install an app development server 
+	configure the dev server
+	write scripts in package json 
+	use the bundler to get the code traspiled and bundled
+	use the app dev server to host the app (the contents of the bundle)
+B. deployment
+	create production code
+	host the production code in real-time web server in machine
+
+
+
+
 
 
 

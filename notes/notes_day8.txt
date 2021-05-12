@@ -1,0 +1,3 @@
+Single Page Application: (browser-based application)
+Frameworks: Angular, Angular JS
+Library: React JS
