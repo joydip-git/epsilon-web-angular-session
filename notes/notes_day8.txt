@@ -1,3 +1,21 @@
 Single Page Application: (browser-based application)
 Frameworks: Angular, Angular JS
 Library: React JS
+
+whenever an object is created by calling a function, immediately that object is linked to the prototype object of that function
+
+TypeScript:
+compile time checking (typescript compiler)
+typeification:
+let x:number = 10;
+function add(a:number,b:number){
+}
+
+var add = function(a:
+superset of JS
+
+Install ANGULAR CLI tool:
+npm i @angular/cli -g
+
+>ng new <app-name>
+

@@ -23,7 +23,7 @@ const webpackConfigObject = {
     })],
     devServer: {
         contentBase: pathModule.resolve(__dirname, 'build'),
-        port: 4000,
+        port: 4001,
         compress: true
     }
 }

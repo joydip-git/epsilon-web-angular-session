@@ -187,6 +187,10 @@ B. deployment
 	create production code
 	host the production code in real-time web server in machine
 
+create-react-app
+
+angular cli (ng)
+
 
 
 
