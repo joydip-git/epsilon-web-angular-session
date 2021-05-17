@@ -1,0 +1,68 @@
+<div class="panel panel-primary">
+	<!-- design for no of products -->
+  <div class="panel panel-heading">
+
+  </div>
+
+  <div class="panel panel-body">
+
+    <div class="row">
+		<!-- design for filter by text-->
+      <div class="col-md-2">
+        
+      </div>
+		<!-- design for textbox -->
+      <div class="col-md-4">
+
+      </div>
+		<!-- design for sort by text -->
+      <div class="col-md-2">
+
+      </div>
+      <!-- div for dropdown -->
+      <div class="col-md-4">
+
+      </div>
+    </div>
+    <br>
+	<!-- alternate design -->
+    <div class="table-responsive">
+      <table class="table">
+        <thead style="background-color: burlywood">
+          <tr>
+		<!-- add button here -->
+            <th>
+		Image
+            </th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Availability</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            	<!-- add alternate design here too -->
+            <td>
+		<!-- image here -->
+              <div></div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button>
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
