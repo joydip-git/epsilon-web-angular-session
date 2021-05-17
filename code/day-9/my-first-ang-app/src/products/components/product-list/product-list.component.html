@@ -1,0 +1,37 @@
+<input type="checkbox" name="sizeRadio" id="sizeRadio" (change)='changeSize()'> Smaller Image
+<br>
+<div class="table-responsive">
+    <table *ngIf='allProducts && allProducts.length>0' class="table">
+        <thead style="background-color: burlywood;">
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let p of allProducts'>
+                <td>
+                    <img src="{{ p.imageUrl }}" alt="NA" [title]="p.productName"
+                        [ngStyle]="{'margin':applyStyle===true?'2px':'20px'} && {'width':applyStyle===true?'50px':'100px'}">
+                </td>
+                <td>
+                    <a href="#">
+                        {{p.productName}}
+                    </a>
+                </td>
+                <td>
+                    {{p.productCode}}
+                </td>
+                <td>
+                    {{p.price}}
+                </td>
+                <td>
+                    {{p.starRating}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

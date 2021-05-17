@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const json = require('body-parser').json();
 const cors = require('cors');
 const productCtrl = require('./controller/productController');
 
@@ -7,7 +7,7 @@ const productCtrl = require('./controller/productController');
 const baseUrl = '/productservice';
 let app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json);
 
 app.route(baseUrl)
     .get(productCtrl.fetchProducts)
@@ -19,6 +19,7 @@ app.route(baseUrl + '/:id')
     .get(productCtrl.fetchProduct);
 
 
-let server = app.listen(8081, function () {     var port = server.address().port;
+let server = app.listen(8081, function () {
+    var port = server.address().port;
     console.log(`Product Service is running at http://127.0.0.1:${port}${baseUrl}`);
 })

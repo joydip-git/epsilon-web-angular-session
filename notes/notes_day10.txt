@@ -1,0 +1,21 @@
+//1. code
+import {Component} from '@angular/core'
+
+@Compomnent({
+  selector:'app-products',
+  templateUrl:'./products.html',
+  styleUrls:['./products.css']
+})
+
+export class ProductsComponent{
+  width = 300;
+  data = 'data'
+}
+
+//2. HTML
+
+<div [style.width.px]='width'>
+{{ data }}
+</div>
+
+//3. CSS

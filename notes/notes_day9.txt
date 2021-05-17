@@ -1,0 +1,50 @@
+Angular:
+	a. client-side framework: to create browser-based application
+	b. 
+
+Angular JS and Angular:
+----------------------------
+Angular JS: 1.6.x
+
+Angular 2,4,5: 2016
+	@angular/core - 3.2.1
+	@ang/ani 2.5.4
+	@ang/platform  - 3.3.9
+
+Angular 4:
+
+ng build: webpack --mode development
+
+1. component =  Design + code + Metadata
+	@Component({ templateUrl: '', styleUrls:['',''], selector:'app-root'}) <-- Decorator
+	class C{}
+a. Nested Component
+b. Routed Component
+
+2. service = Code+ Metadata
+	class S{}
+
+3. pipe = Code+ Metadata
+	@Pipe()
+	class P{}
+
+4. directive: Code+ Metadata
+
+	@Directive()
+	class D{}
+interface DInterface{
+   fn(expression, element):void;
+}
+
+class NgIf implements DInterface{
+   fn(expression='allProducts && allProducts.length>0', element=table):void{
+    element.visible = false; 
+   }
+}
+
+employee: id, name, basicpay, dapay, hrapay, totalsalary, location, image
+      
+
+
+
+
