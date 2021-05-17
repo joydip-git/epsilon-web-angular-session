@@ -23,15 +23,15 @@
         <br>
 
         <!-- design for no of products -->
-        <div class="panel panel-heading">
+        <div class="panel panel-heading" *ngIf='products'>
             <h3>
-                5 Records found...
+                {{products.length}} Records found...
             </h3>
         </div>
         <br>
 
         <!-- alternate design -->
-        <div class="table-responsive">
+        <div class="table-responsive" *ngIf='products && products.length>0'>
             <table class="table">
                 <thead style="background-color: burlywood">
                     <tr>
@@ -41,24 +41,35 @@
                         </th>
                         <th>Name</th>
                         <th>Code</th>
-                        <th>Availability</th>
                         <th>Price</th>
                         <th>Rating</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor='let product of products'>
                         <!-- add alternate design here too -->
                         <td>
                             <!-- image here -->
-                            <div></div>
+                            <div class="img-responsive">
+                                <img src="{{ product.imageUrl }}" alt="NA" [title]="product.productName"
+                                    style="width: 50px;margin: 2px;">
+                            </div>
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <a href="#">
+                                {{product.productName}}
+                            </a>
+                        </td>
+                        <td>
+                            {{ product.productCode }}
+                        </td>
+                        <td>
+                            {{product.price}}
+                        </td>
+                        <td>
+                            {{product.starRating}}
+                        </td>
                         <td>
                             <button>
                                 Delete

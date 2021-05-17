@@ -19,3 +19,43 @@ export class ProductsComponent{
 </div>
 
 //3. CSS
+
+
+
+
+app:
+	Common:
+		components:
+			dashboard:
+				DashBoardComponent
+			home:
+				HomeComponent
+	common.module.ts <-- feature module file
+
+	Products:
+		components:
+			product-list:
+				ProductListComponent
+	products.module.ts <-- feature module file
+
+app.module.ts <-- root module
+
+Dependency Injection through:
+	a. constructor (Angular supports this)
+	b. method
+	c. property/getter-setter
+	d. another service
+
+Service class object is required by:
+	a. single component in any module (just a component)
+	b. multiple components of a module (across a module)
+	c. multiple components from multiple modules (across application)
+
+Angular prodvides Dependency injection at different level:
+use 'providers' array at:
+	a. component level (Injector and service provider)
+	b. module level (Injector and service provider)
+	c. application level (Injector and service provider)
+
+If any component, Pipe, Directive or any other service, i.e. anything in Angular which requires dependency injection of a service, those must be decorated with @Injectable() decorator function
+
