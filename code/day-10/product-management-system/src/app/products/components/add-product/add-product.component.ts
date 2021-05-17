@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { FormGroup } from "@angular/forms";
 import { ProductService } from "../../services/product.service";
 
 @Component({
@@ -10,5 +11,13 @@ import { ProductService } from "../../services/product.service";
 export class AddProductComponent {
     constructor(private productService: ProductService) {
 
+    }
+    submitData(addForm: any) {
+        //console.log(addForm.value)
+        this.productService.addProduct(addForm.value)
+            .subscribe(
+                data => console.log(data),
+                err => console.log(err)
+            )
     }
 }

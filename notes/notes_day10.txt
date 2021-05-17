@@ -59,3 +59,49 @@ use 'providers' array at:
 
 If any component, Pipe, Directive or any other service, i.e. anything in Angular which requires dependency injection of a service, those must be decorated with @Injectable() decorator function
 
+event interface method
+X       OnX      ngOnX
+Init    OnInit   ngOnInit
+
+use ngModel directive with every input (type:text, textarea,checkbox, radiobutton etc.) element in your form (except buttons, form element and labels etc.)
+This will create FormControl (angular) element objects for every HTML inmput element
+use ngForm attribute directive with <form> element, which wil create angular FormGroup object
+if you declare template variable with <form>, <input > etc. then you will be able to references to those HTML elemements
+such as <form ngForm #addForm='ngForm'> means you are storing reference angular FormGroup object (which refers to the HTML form element) in addForm variable. you can use this variable to submit the entire form object to component function like this.
+
+//HTML
+ <form name="productForm" autocomplete="on" id="productForm" ngForm #addForm='ngForm'        (ngSubmit)="submitData(addForm)">
+
+
+//Code:
+export class AddProductComponent {
+    constructor(private productService: ProductService) {
+
+    }
+    submitData(addForm: any) {
+        // the addForm object is none other than the Angular Form element
+	//value property will give you the complete data from every text box/textarea etc. from thr form  itself
+	
+        //console.log(addForm.value)
+/**
+output will be like this:
+description: "new laptop from dell"
+imageUrl: "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+price: 67000
+productCode: "dell-1234"
+productId: 101
+productName: "dell xps"
+releaseDate: "2021-05-17"
+starRating: 4
+*/
+        this.productService.addProduct(addForm.value)
+            .subscribe(
+                data => console.log(data),
+                err => console.log(err)
+            )
+    }
+}
+
+
+
+

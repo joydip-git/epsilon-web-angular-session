@@ -20,13 +20,16 @@ export class ProductService {
 
     //Observable of array of json objects --> Observable of array of IProduct objects
     public fetchProducts(): Observable<IProduct[]> {
-        return <Observable<IProduct[]>>this.http.get(this.productsUrl);
+        const result: Observable<Object> = this.http.get(this.productsUrl);
+        const finalResult: Observable<IProduct[]> = <Observable<IProduct[]>>result;
+        return finalResult;
     }
     public fetchProductById(id: number): void {
         this.http.get(`${this.productsUrl}/${id}`)
     }
-    public addProduct(): void {
-        this.http.post(this.productsUrl, {});
+    public addProduct(product: IProduct): Observable<Object> {
+        console.log(product)
+        return this.http.post(this.productsUrl, product);
     }
     public updateProduct(): void {
         this.http.put(this.productsUrl, {});

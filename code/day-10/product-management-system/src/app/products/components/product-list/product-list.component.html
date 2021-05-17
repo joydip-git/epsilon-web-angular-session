@@ -5,19 +5,27 @@
         <div class="row">
             <!-- design for filter by text-->
             <div class="col-md-2">
-
+                Filter By:
             </div>
             <!-- design for textbox -->
             <div class="col-md-4">
-
+                <!-- <input type="text" [value]='searchText' (change)='changeSearchText(search.value)' #search> -->
+                <input type="text" [(ngModel)]='searchText'>
+                <br>
+                Filtering By:{{searchText}}
             </div>
             <!-- design for sort by text -->
             <div class="col-md-2">
-
+                Sort By:
             </div>
             <!-- div for dropdown -->
             <div class="col-md-4">
-
+                <select name="productsSelect" id="productsSelect" [(ngModel)]='selectedOption'>
+                    <option selected disabled value="">--select--</option>
+                    <option>Name</option>
+                    <option>Code</option>
+                    <option>Price</option>
+                </select>
             </div>
         </div>
         <br>
@@ -47,7 +55,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let product of products'>
+                    <tr *ngFor='let product of products|productfilter:searchText'>
                         <!-- add alternate design here too -->
                         <td>
                             <!-- image here -->
@@ -58,14 +66,14 @@
                         </td>
                         <td>
                             <a href="#">
-                                {{product.productName}}
+                                {{product.productName|uppercase}}
                             </a>
                         </td>
                         <td>
-                            {{ product.productCode }}
+                            {{ product.productCode|lowercase }}
                         </td>
                         <td>
-                            {{product.price}}
+                            {{product.price|currency:'INR':'symbol':'1.2-2'}}
                         </td>
                         <td>
                             {{product.starRating}}
